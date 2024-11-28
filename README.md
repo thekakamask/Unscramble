@@ -44,11 +44,27 @@
    - Handles the UI with composable functions for screens and layouts.
 3. **MainActivity**:
    - Hosts the main entry point and sets up the app theme.
+4. **tests/**
+   - Contains unit tests for the **GameViewModel**, validating game logic and state management. 
 
 **Key Files**:
    - **GameViewModel.kt**: Implements the game logic and state management.
    - **GameUiState.kt**: Defines the immutable state used for UI updates.
    - **GameScreen.kt**: Main composable displaying the game UI and connecting to the ViewModel.
+
+## 🧪 Unit Testing
+The project includes unit tests to ensure the game logic workds properly. These tests validate different aspects of the **GameViewModel** ensuring a consistent and error-free user experience.
+
+**Covered Tests**
+   - Initializing the game: Checks that the first word is mixed correctly and that the score starts at 0.
+   - Validation of correct answers: The score increases when a correct answer is given. The error indicator is turned off after a correct response.
+   - Handling incorrect answers: Shows an error for an incorrect answer without affecting the score.
+   - Word skip: Ensures that the current word can be skipped without penalty.
+   - Game progress: Validates that the game ends after the maximum number of words (default: 10). Verifies that the game state correctly reflects progress.
+
+**Test file**
+Unit tests are defined in the following file:
+   - **GameViewModelTest.kt**
 
 ## 🚀 How to Play
 1. Launch the App: Start the game from your device or emulator.

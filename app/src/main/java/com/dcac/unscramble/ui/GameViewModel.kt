@@ -19,7 +19,8 @@ class GameViewModel : ViewModel() {
     // State exposed as read-only for external observers
     val uiState: StateFlow<GameUiState> = _uiState.asStateFlow()
     // Variable to store the current word (to guess or mix)
-    private lateinit var currentWord: String
+    lateinit var currentWord: String
+    private set
     // Mutable set to track words already used
     private var usedWords: MutableSet<String> = mutableSetOf()
     // Holds the current guess entered by the user, initialized as an empty string.
